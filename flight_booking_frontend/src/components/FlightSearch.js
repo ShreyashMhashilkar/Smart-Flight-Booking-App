@@ -505,7 +505,7 @@ const FlightSearch = () => {
             <Button
               onClick={() => {
                 setLoginDialogOpen(false);
-                window.location.href = "/login"; // 👈 Redirect to login page
+                window.location.href = "https://smart-flight-booking-app-1.onrender.com/login"; //  Redirect to login page
               }}
               sx={{
                 px: 4,
