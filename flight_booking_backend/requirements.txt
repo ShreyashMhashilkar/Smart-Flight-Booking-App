@@ -4,3 +4,7 @@ djangorestframework_simplejwt==5.2.2
 joblib==1.5.2
 pandas==2.3.3
 scikit_learn==1.7.2
+gunicorn
+dj-database-url
+psycopg2-binary
+django-cors-headers
