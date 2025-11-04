@@ -2,7 +2,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
-const API_URL = "http://localhost:8000/api";
+const API_URL = "https://smart-flight-booking-app.onrender.com/api";
 
 const apiClient = axios.create({
   baseURL: API_URL,
