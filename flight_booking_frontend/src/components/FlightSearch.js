@@ -425,7 +425,7 @@ const FlightSearch = () => {
         </Snackbar>
 
        {/* Login Required Popup */}
-          <Dialog
+              <Dialog
       open={loginDialogOpen}
       onClose={() => setLoginDialogOpen(false)}
       TransitionComponent={Transition}
@@ -477,20 +477,7 @@ const FlightSearch = () => {
           }}
         >
           You need to log in to confirm your booking.  
-          Please visit the{" "}
-          <a
-            href="https://smart-flight-booking-app-1.onrender.com/login"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              color: "#1976D2",
-              fontWeight: "bold",
-              textDecoration: "none",
-            }}
-          >
-            login page
-          </a>{" "}
-          to continue.
+          Please log in to continue.
         </Typography>
       </DialogContent>
     </Dialog>
