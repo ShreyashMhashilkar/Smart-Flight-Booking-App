@@ -425,109 +425,75 @@ const FlightSearch = () => {
         </Snackbar>
 
        {/* Login Required Popup */}
-        <Dialog
-          open={loginDialogOpen}
-          onClose={() => setLoginDialogOpen(false)}
-          TransitionComponent={Transition}
-          PaperProps={{
-            sx: {
-              borderRadius: "24px",
-              backdropFilter: "blur(20px)",
-              background: "linear-gradient(135deg, rgba(255,255,255,0.9), rgba(240,248,255,0.95))",
-              boxShadow: "0 12px 40px rgba(0,0,0,0.25)",
-              p: 2,
-            },
+          <Dialog
+      open={loginDialogOpen}
+      onClose={() => setLoginDialogOpen(false)}
+      TransitionComponent={Transition}
+      PaperProps={{
+        sx: {
+          borderRadius: "24px",
+          backdropFilter: "blur(20px)",
+          background:
+            "linear-gradient(135deg, rgba(255,255,255,0.9), rgba(240,248,255,0.95))",
+          boxShadow: "0 12px 40px rgba(0,0,0,0.25)",
+          p: 3,
+          textAlign: "center",
+          maxWidth: 400,
+          mx: "auto",
+        },
+      }}
+    >
+      <DialogTitle
+        sx={{
+          fontWeight: 800,
+          fontSize: "1.6rem",
+          color: "#1565C0",
+          textAlign: "center",
+          letterSpacing: "0.5px",
+          pb: 1,
+        }}
+      >
+        🔐 Login Required
+      </DialogTitle>
+
+      <DialogContent>
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/5087/5087579.png"
+          alt="Login Illustration"
+          style={{
+            width: "100px",
+            height: "100px",
+            opacity: 0.95,
+            marginBottom: "20px",
+          }}
+        />
+
+        <Typography
+          sx={{
+            color: "#424242",
+            fontSize: "1.1rem",
+            lineHeight: 1.7,
+            px: 2,
           }}
         >
-          <DialogTitle
-            sx={{
-              fontWeight: 800,
-              fontSize: "1.6rem",
-              color: "#1565C0",
-              textAlign: "center",
-              letterSpacing: "0.5px",
-              pb: 1,
+          You need to log in to confirm your booking.  
+          Please visit the{" "}
+          <a
+            href="https://smart-flight-booking-app-1.onrender.com/login"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              color: "#1976D2",
+              fontWeight: "bold",
+              textDecoration: "none",
             }}
           >
-            🔐 Login Required
-          </DialogTitle>
-
-          <DialogContent sx={{ textAlign: "center" }}>
-            <Typography
-              sx={{
-                color: "#424242",
-                fontSize: "1.05rem",
-                lineHeight: 1.6,
-                mb: 3,
-              }}
-            >
-              You need to log in to confirm your booking.  
-              Please go to the login page to continue.
-            </Typography>
-
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/5087/5087579.png"
-              alt="Login Illustration"
-              style={{
-                width: "90px",
-                height: "90px",
-                opacity: 0.9,
-                marginBottom: "10px",
-              }}
-            />
-          </DialogContent>
-
-          <DialogActions
-            sx={{
-              justifyContent: "center",
-              pb: 2,
-            }}
-          >
-            <Button
-              onClick={() => setLoginDialogOpen(false)}
-              sx={{
-                px: 3,
-                py: 1.2,
-                borderRadius: "12px",
-                background: "linear-gradient(90deg, #E0E0E0, #BDBDBD)",
-                color: "#212121",
-                fontWeight: "bold",
-                textTransform: "none",
-                "&:hover": {
-                  background: "linear-gradient(90deg, #BDBDBD, #9E9E9E)",
-                  transform: "scale(1.05)",
-                },
-              }}
-            >
-              Cancel
-            </Button>
-
-            <Button
-              onClick={() => {
-                setLoginDialogOpen(false);
-                window.location.href = "https://smart-flight-booking-app-1.onrender.com/login"; //  Redirect to login page
-              }}
-              sx={{
-                px: 4,
-                py: 1.2,
-                borderRadius: "12px",
-                background: "linear-gradient(90deg, #2196F3, #64B5F6)",
-                color: "#fff",
-                fontWeight: "bold",
-                textTransform: "none",
-                boxShadow: "0 4px 12px rgba(33,150,243,0.4)",
-                "&:hover": {
-                  background: "linear-gradient(90deg, #1976D2, #42A5F5)",
-                  transform: "translateY(-2px)",
-                  boxShadow: "0 6px 16px rgba(33,150,243,0.5)",
-                },
-              }}
-            >
-              Go to Login
-            </Button>
-          </DialogActions>
-        </Dialog>
-
+            login page
+          </a>{" "}
+          to continue.
+        </Typography>
+      </DialogContent>
+    </Dialog>
       </Container>
     </LocalizationProvider>
   );
